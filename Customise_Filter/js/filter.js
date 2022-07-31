@@ -86,6 +86,7 @@ const filter_list = (texts)=>{
 // LIST ACTION [INSERT VALUE INSIDE INPUT FILD]
 Selector.addEventListener('click', (e)=>{
     Filter_Input.value = e.target.innerText;
+    Selector.innerHTML = ``;
     console.warn(e.target.innerText)
 })
 
@@ -100,9 +101,9 @@ Filter_Input.addEventListener('input', ()=>{
     }
 })
 
-// INITIALIZE WINDOW
-window.addEventListener('load', ()=>{
-    data_list(data);
-})
+// // INITIALIZE WINDOW
+// window.addEventListener('load', ()=>{
+//     data_list(data);
+// })
 
 
