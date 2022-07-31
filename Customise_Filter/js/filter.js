@@ -53,6 +53,9 @@ let data = [
 {   'id': 4,
     'name': 'Four'
 },
+{   'id': 41,
+    'name': 'West Bengal'
+},
 ]
 
 // CREATING DATA LIST WITH-OUT FILTER
@@ -69,8 +72,10 @@ const filter_list = (texts)=>{
     Selector.innerHTML = ``;
     let newData = []
     for (let i=0; i<data.length; i++){
-
-        if (data[i].name.toLowerCase().startsWith(texts.toLowerCase())){
+        if (data[i].name.toLowerCase().indexOf(texts.toLowerCase()) > -1){
+            newData.push({'id': data[i].id, 'name': data[i].name})
+        }
+        else if (data[i].name.toLowerCase().startsWith(texts.toLowerCase())){
             newData.push({'id': data[i].id, 'name': data[i].name})
         }
         else if (data[i].id.toString().startsWith(texts)){
