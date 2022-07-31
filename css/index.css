@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.Selection{
+    width: 100vw;
+    max-width: 350px;
+    height: 40px;
+}
+datalist option {
+    width: 100vw;
+    font-size: 0.8em;
+    padding: 0.3em 1em;
+    background-color: #ccc;
+    cursor: pointer;
+  }
